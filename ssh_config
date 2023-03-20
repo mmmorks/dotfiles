@@ -1,0 +1,19 @@
+Include aliases
+
+Host comma
+  Hostname 192.168.88.9
+  User comma
+  Port 8022
+  ForwardX11 yes
+  Compression yes
+  IdentityFIle ~/.ssh/id_rsa
+
+Match final host comma-*
+  Port 22
+  User comma
+  ProxyCommand ssh %h@ssh.comma.ai -W %h:%p
+
+Host ssh.comma.ai
+  Hostname ssh.comma.ai
+  Port 22
+  IdentityFile ~/.ssh/id_rsa
