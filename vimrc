@@ -48,6 +48,9 @@ augroup CursorLine
   au WinLeave * setlocal nocursorline
 augroup END
 
+set ignorecase
+set smartcase
+
 set number
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
@@ -91,10 +94,10 @@ let g:syntastic_python_checkers=["python"]
 
 " proper PEP 8 indentation
 au BufNewFile,BufRead *.py
-    \ set tabstop=4 |
-    \ set softtabstop=4 |
-    \ set shiftwidth=4 |
-    \ set textwidth=79 |
+    \ set tabstop=2 |
+    \ set softtabstop=2 |
+    \ set shiftwidth=2 |
+    \ set textwidth=100 |
     \ set expandtab |
     \ set autoindent |
     \ set fileformat=unix

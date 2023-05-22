@@ -17,3 +17,7 @@ Host ssh.comma.ai
   Hostname ssh.comma.ai
   Port 22
   IdentityFile ~/.ssh/id_rsa
+
+Host pi
+  Hostname 192.168.89.2
+  IdentityFile ~/.ssh/id_rsa

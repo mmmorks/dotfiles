@@ -8,9 +8,14 @@
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
     cb = change-branch
     fa = fetch --all
+    d = difftool
 [core]
 	editor = vim
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = !/usr/bin/gh auth git-credential
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
