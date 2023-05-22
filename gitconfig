@@ -1,21 +1,21 @@
 [user]
-	email = john@morkel.me
+    email = john@morkel.me
 
 [alias]
-	st = status
-	co = checkout
-	nuke = clean -fdx
+    st = status
+    co = checkout
+    nuke = clean -fdx
     tree = log --graph --decorate --pretty=oneline --abbrev-commit
     cb = change-branch
     fa = fetch --all
     d = difftool
 [core]
-	editor = vim
+    editor = vim
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !/usr/bin/gh auth git-credential
 [diff]
-	tool = vimdiff
+    tool = vimdiff
 [difftool]
-	prompt = false
+    prompt = false
