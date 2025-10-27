@@ -112,9 +112,17 @@ highlight PmenuSel ctermfg=DarkGrey ctermbg=LightGrey guifg=#ffffff guibg=#00000
 "python with virtualenv support
 py3 << EOF
 import os
+import sys
 if 'VIRTUAL_ENV' in os.environ:
   project_base_dir = os.environ['VIRTUAL_ENV']
   activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-  with open(activate_this, 'r') as f:
-    exec(f.read(), dict(__file__=activate_this))
+  # Only try to activate if the file exists
+  if os.path.exists(activate_this):
+    with open(activate_this, 'r') as f:
+      exec(f.read(), dict(__file__=activate_this))
+  else:
+    # Add the virtual environment's site-packages to sys.path
+    venv_site_packages = os.path.join(project_base_dir, 'lib', 'python%s.%s' % (sys.version_info[0], sys.version_info[1]), 'site-packages')
+    if os.path.exists(venv_site_packages):
+      sys.path.insert(0, venv_site_packages)
 EOF

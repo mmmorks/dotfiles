@@ -1,5 +1,6 @@
 [user]
-    email = john@morkel.me
+	email = mmmorks@mmmorks.net
+	name = mmmorks
 
 [alias]
     st = status
@@ -9,13 +10,25 @@
     cb = change-branch
     fa = fetch --all
     d = difftool
+	lola = log --all --decorate --oneline --graph
 [core]
     editor = vim
 [credential "https://github.com"]
-    helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-    helper = !/usr/bin/gh auth git-credential
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
 [diff]
     tool = vimdiff
 [difftool]
     prompt = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[protocol "file"]
+	allow = always
+[submodule]
+	recurse = true
