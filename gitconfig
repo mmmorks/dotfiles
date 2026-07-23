@@ -12,7 +12,7 @@
     d = difftool
 	lola = log --all --decorate --oneline --graph
 [core]
-    editor = vim
+    editor = nvim
 [credential "https://github.com"]
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
@@ -20,7 +20,7 @@
 	helper = 
 	helper = !/opt/homebrew/bin/gh auth git-credential
 [diff]
-    tool = vimdiff
+    tool = nvimdiff
 [difftool]
     prompt = false
 [filter "lfs"]
