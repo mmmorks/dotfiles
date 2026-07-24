@@ -8,3 +8,4 @@ local opt = vim.opt
 opt.ignorecase = true
 opt.smartcase = true
 opt.number = true
+opt.relativenumber = false -- LazyVim defaults this on; vimrc used absolute numbers only
